@@ -11,8 +11,8 @@ class WelcomePage extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                fit: BoxFit.fitWidth,
-                image: NetworkImage('https://th.bing.com/th/id/OIP.wB_otRXqj01-9kd_hBT_tAHaHU?pid=ImgDet&w=1200&h=1186&rs=1')
+                fit: BoxFit.cover,
+                image: NetworkImage('https://blog.skydropx.com/wp-content/uploads/2020/03/rastreo-paquete-express.jpg')
               )
             ),
             child: BackdropFilter(
@@ -28,7 +28,8 @@ class WelcomePage extends StatelessWidget {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
                 child: Text("ENTREGAS A SU DOMICILIO", style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
+                  fontStyle: FontStyle.italic,
                   fontWeight: FontWeight.bold,
                   fontSize: 40.0,
                 ),),
@@ -38,12 +39,67 @@ class WelcomePage extends StatelessWidget {
                 child: Text(
                   "indicar destino donde se deberia realizar la entrega", 
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
+                    fontStyle: FontStyle.italic,
                     fontWeight: FontWeight.w500,
                     fontSize: 20.0,
                   )
                 ),
-              )
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 30),
+                width: 350,
+                height: 45,
+                child: RaisedButton(
+                  onPressed: () {
+
+                  },
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20) 
+                  ),
+                  color: Theme.of(context).accentColor,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Login',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15
+                        ),
+                      )
+                    ]
+                  ),
+                ),
+              ),
+              // Container(
+              //   width: 350,
+              //   height: 45,
+              //   child: RaisedButton(
+              //     onPressed: () {
+
+              //     },
+              //     shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.circular(20) 
+              //     ),
+              //     color: Theme.of(context).accentColor,
+              //     child: Row(
+              //       mainAxisAlignment: MainAxisAlignment.center,
+              //       children: [
+              //         Image(
+              //           image: AssetImage('../assets/google-logo.jpg'),
+              //         ),
+              //         Text(
+              //           'Conectar con google',
+              //           style: TextStyle(
+              //             color: Colors.white,
+              //             fontSize: 15
+              //           ),
+              //         )
+              //       ]
+              //     ),
+              //   ),
+              // )
             ],
           )
         ],
