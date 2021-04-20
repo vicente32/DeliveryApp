@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
+import 'login_page.dart';
+
 class WelcomePage extends StatelessWidget {
   
    @override
@@ -52,7 +54,10 @@ class WelcomePage extends StatelessWidget {
                 height: 45,
                 child: RaisedButton(
                   onPressed: () {
-
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                          builder: (context) => new LoginPage()));
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20) 
@@ -72,34 +77,6 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              // Container(
-              //   width: 350,
-              //   height: 45,
-              //   child: RaisedButton(
-              //     onPressed: () {
-
-              //     },
-              //     shape: RoundedRectangleBorder(
-              //       borderRadius: BorderRadius.circular(20) 
-              //     ),
-              //     color: Theme.of(context).accentColor,
-              //     child: Row(
-              //       mainAxisAlignment: MainAxisAlignment.center,
-              //       children: [
-              //         Image(
-              //           image: AssetImage('../assets/google-logo.jpg'),
-              //         ),
-              //         Text(
-              //           'Conectar con google',
-              //           style: TextStyle(
-              //             color: Colors.white,
-              //             fontSize: 15
-              //           ),
-              //         )
-              //       ]
-              //     ),
-              //   ),
-              // )
             ],
           )
         ],
